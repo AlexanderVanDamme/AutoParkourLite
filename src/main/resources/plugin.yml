@@ -1,6 +1,6 @@
 name: AutoParkourLite
 author: Hellgast23
-version: 2.0.0
+version: 2.1.0
 main: me.spigot.hellgast23.autoparkourlite.MainPlugin
 
 commands:

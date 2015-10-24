@@ -32,7 +32,7 @@ public class ParkourCmdExecutor implements CommandExecutor{
         }
         try {
             domContr.startParkour(player);
-            player.sendMessage("Your AutoParkourLite parkour has started.");
+            player.sendMessage(ChatColor.GREEN + "[AutoParkourLite] " + ChatColor.GRAY + "Your AutoParkourLite parkour has started.");
         } catch (InvalidActionException e) {
             player.sendMessage(ChatColor.RED + e.getMessage());
         }

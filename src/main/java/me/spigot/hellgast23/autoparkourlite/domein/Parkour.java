@@ -374,7 +374,7 @@ public class Parkour {
     private void sendMessage(String message) {
         Player player = getPlayer();
         if (player != null && player.isOnline()) {
-            player.sendMessage(ChatColor.GREEN + "[AutoParkour] " + ChatColor.GRAY + message);
+            player.sendMessage(ChatColor.GREEN + "[AutoParkourLite] " + ChatColor.GRAY + message);
         }
     }
 

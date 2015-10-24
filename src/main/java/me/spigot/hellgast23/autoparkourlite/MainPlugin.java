@@ -7,6 +7,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
 
+import java.io.IOException;
+
 /**
  * Created on: 19/10/2015 at 14:35
  */
@@ -23,6 +25,14 @@ public class MainPlugin extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new ParkourListener(domCont),this);
         getCommand("autoparkourlite").setExecutor(new ParkourCmdExecutor(domCont));
+
+        //Setup metrics
+        try {
+            Metrics metrics = new  Metrics(this);
+            metrics.start();
+        } catch (IOException e) {
+            // Failed to submit the stats :-(
+        }
 
     }
 
